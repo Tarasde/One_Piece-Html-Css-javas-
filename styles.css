@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;  /* Чорний фон */
+    background-image: url('images/background.jpg');  /* Зображення як фон */
+    background-size: cover;  /* Масштабувати зображення, щоб покрити весь екран */
+    background-position: center;  /* Центрувати зображення */
+    background-repeat: no-repeat;  /* Не повторювати зображення */
+    color: #fff;  /* Білий текст */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.7);  /* Прозорий фон */
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);  /* Прозорий фон для головного контенту */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #ff6347;  /* Помаранчевий колір заголовків */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 200px;  /* Фіксована ширина зображення */
+    height: 200px;  /* Фіксована висота зображення */
+    object-fit: cover;  /* Обрізати зображення, щоб воно стало квадратним */
+    cursor: pointer;
+}
+
+section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#countdown-timer {
+    font-size: 2em;
+    color: #ff6347;  /* Помаранчевий колір */
+    text-align: center;
+}
+
+/* CSS для відображення зображення на весь екран */
+.fullscreen-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.fullscreen-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fullscreen-img::before {
+    content: "Kliknij, aby zamknąć";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.2em;
+}
